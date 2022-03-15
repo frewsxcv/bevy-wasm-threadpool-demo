@@ -12,13 +12,7 @@ default = ["console_error_panic_hook"]
 
 [dependencies]
 wasm-bindgen = "0.2.63"
-bevy = { version = "0.6", default-features = false, features = [
-    "bevy_winit",
-    "bevy_core_pipeline",
-    "bevy_render",
-    "bevy_sprite",
-    "bevy_ui",
-]}
+bevy = { git = "https://github.com/frewsxcv/bevy.git", branch = "wasm-threadpool", default-features = false, features = [ "bevy_winit", "bevy_core_pipeline", "bevy_render", "bevy_sprite", "bevy_ui", ] }
 futures-lite = "*"
 async-channel = "*"
 web-sys = { version = "*", features = ["console"] }
